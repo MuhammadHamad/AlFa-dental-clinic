@@ -1,29 +1,38 @@
 export const beforeAfterCases = [
   {
-    id: "case-1",
+    id: "whitening",
     title: "Laser Teeth Whitening & Stain Removal",
     procedure: "Cosmetic Laser Whitening",
-    duration: "45 Minutes Session",
-    beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80",
-    description: "Deep yellow enamel staining from tea/coffee transformed into a brilliant white shade in a single 45-minute laser session."
+    duration: "Single 45-min session",
+    patientAge: "28 Yrs",
+    beforeImage: "/assets/teeth_before_whitening.png",
+    afterImage: "/assets/teeth_after_whitening.png",
+    beforeLabel: "Yellow Stained Teeth",
+    afterLabel: "8 Shades Brighter",
+    description: "Severe tea, coffee, and tobacco enamel stain removal restored to a brilliant natural white shade in a single 45-minute laser session."
   },
   {
-    id: "case-2",
-    title: "Porcelain Veneer Smile Makeover",
-    procedure: "E-Max Porcelain Veneers",
-    duration: "2 Visits (5 Days)",
-    beforeImage: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=80",
-    description: "Correction of chipped front teeth and uneven spacing using custom hand-sculpted E-Max porcelain laminates."
+    id: "implants",
+    title: "Front Dental Implant & Crown Restoration",
+    procedure: "Biocompatible Titanium Implant",
+    duration: "Complete 3 Month Osseointegration",
+    patientAge: "34 Yrs",
+    beforeImage: "/assets/teeth_before_implant.png",
+    afterImage: "/assets/teeth_after_implant.png",
+    beforeLabel: "Chipped / Missing Tooth",
+    afterLabel: "Natural Zirconia Crown",
+    description: "Traumatized upper incisor replaced with a grade-4 titanium implant and custom-matched Zirconia crown restoring full function."
   },
   {
-    id: "case-3",
-    title: "Clear Aligner Teeth Alignment",
-    procedure: "Invisible Orthodontics",
-    duration: "7 Months Treatment",
-    beforeImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
-    afterImage: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-    description: "Correction of crowded lower teeth using transparent medical-grade aligner trays without traditional metal wires."
+    id: "orthodontics",
+    title: "Clear Aligner & Orthodontic Realignment",
+    procedure: "Invisible Orthodontic Aligners",
+    duration: "12 Months Alignment",
+    patientAge: "22 Yrs",
+    beforeImage: "/assets/teeth_before_braces.png",
+    afterImage: "/assets/teeth_after_braces.png",
+    beforeLabel: "Crowded Misaligned Teeth",
+    afterLabel: "Perfectly Aligned Smile",
+    description: "Correction of severe anterior crowding and midline spacing using custom transparent medical-grade aligner trays."
   }
 ];

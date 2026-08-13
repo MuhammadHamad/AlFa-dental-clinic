@@ -113,7 +113,7 @@ export default function Hero({ onOpenBooking, lang }) {
         <div className="hero-media">
           <div className="hero-image-wrapper glass-card">
             <img 
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" 
+              src="/assets/clinic_interior.png" 
               alt="AlFa Dental Clinic Treatment Room" 
               className="hero-img"
             />
