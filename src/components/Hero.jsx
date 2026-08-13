@@ -6,9 +6,7 @@ import {
   ArrowRight, 
   CheckCircle2, 
   Star, 
-  Award, 
-  Activity, 
-  Users 
+  Award 
 } from 'lucide-react';
 import { clinicData } from '../data/clinicData';
 import './Hero.css';
@@ -32,14 +30,14 @@ export default function Hero({ onOpenBooking, lang }) {
         {/* Left Content Column */}
         <div className="hero-content">
           <div className="hero-badge">
-            <Award size={16} className="badge-icon" />
-            <span>{lang === 'en' ? "Peshawar's Top Rated Dental Clinic" : "پشاور کا بہترین ڈینٹل کلینک"}</span>
+            <Award size={15} className="badge-icon" />
+            <span>{lang === 'en' ? "Peshawar's Top Rated Dental Center" : "پشاور کا بہترین ڈینٹل کلینک"}</span>
           </div>
 
           <h1 className="hero-title">
             {lang === 'en' ? (
               <>
-                Precision Dental Care & <span className="text-gradient">Aesthetic Excellence</span>
+                Precision Dental Care & <span className="text-gradient">Aesthetic Perfection</span>
               </>
             ) : (
               <>
@@ -69,7 +67,7 @@ export default function Hero({ onOpenBooking, lang }) {
             ))}
           </ul>
 
-          {/* Action Buttons */}
+          {/* High-Converting Action Buttons */}
           <div className="hero-actions">
             <button className="btn-primary hero-btn" onClick={() => onOpenBooking()}>
               <Calendar size={18} />
@@ -77,7 +75,7 @@ export default function Hero({ onOpenBooking, lang }) {
             </button>
 
             <a href="#services" className="btn-secondary hero-btn">
-              <span>{lang === 'en' ? 'View Treatments' : 'خدمات دیکھیں'}</span>
+              <span>{lang === 'en' ? 'Explore Treatments' : 'خدمات دیکھیں'}</span>
               <ArrowRight size={18} />
             </a>
           </div>
@@ -101,7 +99,7 @@ export default function Hero({ onOpenBooking, lang }) {
 
             <div className="micro-stat">
               <div className="star-rating-box">
-                <Star size={16} fill="#D4AF37" color="#D4AF37" />
+                <Star size={15} fill="#D4AF37" color="#D4AF37" />
                 <span className="rating-score">5.0</span>
               </div>
               <span className="micro-stat-label">{lang === 'en' ? 'Verified Reviews' : 'مثبت تاثرات'}</span>
@@ -109,7 +107,7 @@ export default function Hero({ onOpenBooking, lang }) {
           </div>
         </div>
 
-        {/* Right Media Column - High Quality Interior Image with Glowing Overlay */}
+        {/* Right Media Column - Clean Showcase Frame */}
         <div className="hero-media">
           <div className="hero-image-wrapper glass-card">
             <img 
@@ -118,30 +116,15 @@ export default function Hero({ onOpenBooking, lang }) {
               className="hero-img"
             />
             
-            {/* Glowing Backdrop Mesh */}
+            {/* Subtle Glow Backdrop */}
             <div className="glow-effect-teal"></div>
             <div className="glow-effect-gold"></div>
 
-            {/* Glowing Rating Badge Overlay */}
-            <div className="rating-overlay-badge glass-card animate-float">
-              <div className="badge-stars">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="#D4AF37" color="#D4AF37" />
-                ))}
-              </div>
-              <div className="badge-info">
-                <span className="badge-num">5.0 Rating</span>
-                <span className="badge-sub">{lang === 'en' ? 'AlFa Dental Clinic • Dabgari Gardens' : 'الفا ڈینٹل کلینک • پشاور'}</span>
-              </div>
-            </div>
-
-            {/* Sterilization Overlay Badge */}
-            <div className="sterilization-overlay-badge glass-card animate-float-delayed">
-              <ShieldCheck size={24} className="text-teal" />
-              <div>
-                <span className="badge-title">{lang === 'en' ? '100% Autoclaved' : 'جرثومہ سے پاک'}</span>
-                <span className="badge-desc">{lang === 'en' ? 'Hospital Sterilization' : 'ہسپتال کا معیار'}</span>
-              </div>
+            {/* Clean Overlay Pill */}
+            <div className="rating-overlay-badge glass-card">
+              <Star size={15} fill="#D4AF37" color="#D4AF37" />
+              <span className="badge-num">5.0 Rating</span>
+              <span className="badge-sub">• {lang === 'en' ? '500+ Reviews' : 'مثبت جائزہ'}</span>
             </div>
           </div>
         </div>
