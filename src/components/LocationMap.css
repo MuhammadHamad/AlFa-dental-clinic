@@ -1,0 +1,345 @@
+.location-section {
+  padding: var(--section-spacing) 0;
+  position: relative;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: stretch;
+}
+
+.location-details-col {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--glass-border-teal);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.9) 100%);
+}
+
+.loc-card-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.loc-block-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.loc-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 168, 181, 0.12);
+  border: 1px solid rgba(0, 168, 181, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loc-block-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.loc-floor-tag {
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.loc-full-address {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.get-directions-btn {
+  align-self: flex-start;
+  font-size: 0.88rem;
+}
+
+.loc-sub-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.timings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+.day-name {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.time-slot {
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.portals-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.portal-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.portal-link-btn:hover {
+  background: rgba(0, 168, 181, 0.15);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* Right Column Map */
+.location-map-col {
+  position: relative;
+  border: 1px solid var(--glass-border-teal);
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.map-frame-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+}
+
+.google-map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+/* TOP-LEFT Google Maps Info Card Overlay */
+.map-top-left-card {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  max-width: 320px;
+  padding: 1rem;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border-teal);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-radius: var(--radius-md);
+}
+
+.map-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.map-pin-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 168, 181, 0.15);
+  border: 1px solid var(--glass-border-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.map-clinic-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.map-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+}
+
+.map-rating-val {
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.map-review-count {
+  color: var(--text-muted);
+}
+
+.map-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.map-card-address-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+}
+
+.address-label {
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.address-val {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  line-height: 1.35;
+}
+
+.map-direct-directions-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-cyan) 100%);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 12px var(--accent-teal-glow);
+}
+
+.map-direct-directions-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* Bottom Hotline Box */
+.hotline-overlay-box {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border-teal);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10;
+  border-radius: var(--radius-md);
+}
+
+.hotline-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 168, 181, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hotline-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotline-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hotline-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.hotline-number:hover {
+  color: var(--text-light);
+}
+
+/* Mobile Safeguards */
+@media (max-width: 900px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hours-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .map-top-left-card {
+    position: static;
+    margin: 1rem;
+    max-width: none;
+  }
+
+  .hotline-overlay-box {
+    position: static;
+    margin: 0 1rem 1rem 1rem;
+    width: auto;
+  }
+}

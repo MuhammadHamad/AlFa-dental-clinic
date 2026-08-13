@@ -1,0 +1,72 @@
+.trust-badges-section {
+  padding: 1.5rem 0 3.5rem 0;
+}
+
+.trust-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--glass-border-teal);
+  background: linear-gradient(135deg, rgba(23, 42, 69, 0.7) 0%, rgba(15, 34, 61, 0.8) 100%);
+}
+
+.trust-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.trust-stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-icon-teal { color: var(--accent-teal); }
+.stat-icon-cyan { color: var(--accent-cyan); }
+.stat-icon-gold { color: var(--accent-gold); }
+
+.stat-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: clamp(0.78rem, 1.4vw, 0.9rem);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .trust-matrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .trust-matrix {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

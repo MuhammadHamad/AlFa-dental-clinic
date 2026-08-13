@@ -1,0 +1,186 @@
+.doctor-section {
+  padding: var(--section-spacing) 0;
+  position: relative;
+}
+
+.doctor-card {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--glass-border-teal);
+  background: linear-gradient(135deg, rgba(23, 42, 69, 0.8) 0%, rgba(10, 25, 47, 0.9) 100%);
+}
+
+.doctor-layout-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+/* Left Portrait */
+.doctor-portrait-col {
+  position: relative;
+}
+
+.portrait-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: visible;
+}
+
+.doctor-photo {
+  width: 100%;
+  height: auto;
+  min-height: 380px;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  display: block;
+}
+
+.portrait-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1rem;
+  right: 1rem;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(10, 25, 47, 0.92);
+  border: 1px solid var(--accent-gold-glow);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.portrait-badge-title {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+}
+
+.portrait-badge-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+/* Right Bio Info */
+.doctor-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-header-group {
+  margin-bottom: 1.25rem;
+}
+
+.doctor-name {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.doctor-titles {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--accent-cyan);
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.distinction-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--accent-gold);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.doctor-bio {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+/* Credentials Grid - Mobile Collapse Safeties */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cred-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.cred-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cred-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+}
+
+.text-cyan { color: var(--accent-cyan); }
+
+.doctor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.doctor-btn {
+  padding: 0.85rem 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .doctor-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr; /* 1-column layout safeguard */
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .doctor-actions {
+    flex-direction: column; /* vertical button stack safeguard */
+    width: 100%;
+  }
+
+  .doctor-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
