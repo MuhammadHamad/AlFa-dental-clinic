@@ -317,11 +317,44 @@
 .next-step-btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
 
 @media (max-width: 540px) {
+  .booking-modal-content {
+    padding: 1.25rem 1rem;
+    max-height: 88vh;
+    border-radius: var(--radius-md);
+  }
+
+  .booking-modal-title {
+    font-size: 1.15rem;
+  }
+
+  .step-progress-bar {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .step-label {
+    display: none; /* Hide text label on mobile to keep progress bar clean */
+  }
+
   .service-choice-grid {
     grid-template-columns: 1fr;
+    max-height: 260px;
   }
-  
+
   .time-slots-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-modal-footer {
+    gap: 0.5rem;
+  }
+
+  .prev-step-btn, .next-step-btn {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    flex: 1;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

@@ -39,11 +39,28 @@ export default function DoctorProfile({ onOpenBooking, lang }) {
             {/* Left Portrait Column */}
             <div className="doctor-portrait-col">
               <div className="portrait-frame">
-                <img 
-                  src="https://images.unsplash.com/photo-1594824813571-24a69c100417?auto=format&fit=crop&w=800&q=80" 
-                  alt={doctor.name} 
-                  className="doctor-photo"
-                />
+                <div className="doctor-placeholder-avatar">
+                  <div className="avatar-graphic-box">
+                    <svg viewBox="0 0 120 120" className="doctor-avatar-svg">
+                      <circle cx="60" cy="60" r="58" fill="url(#docAvatarGrad)" stroke="rgba(0, 194, 203, 0.4)" strokeWidth="3" />
+                      <defs>
+                        <linearGradient id="docAvatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#172A45" />
+                          <stop offset="100%" stopColor="#0A192F" />
+                        </linearGradient>
+                      </defs>
+                      {/* Medical Doctor Silhouette */}
+                      <path d="M60 22 C46 22 36 32 36 46 C36 58 45 67 58 68 C35 74 22 92 20 108 L100 108 C98 92 85 74 62 68 C75 67 84 58 84 46 C84 32 74 22 60 22 Z" fill="#00C2CB" opacity="0.85" />
+                      {/* Stethoscope Accent */}
+                      <path d="M46 72 C46 84 74 84 74 72 L74 64 M60 84 L60 92 C60 96 56 100 50 100" stroke="#D4AF37" strokeWidth="3" strokeLinecap="round" fill="none" />
+                      <circle cx="50" cy="100" r="4" fill="#D4AF37" />
+                    </svg>
+                  </div>
+                  <div className="placeholder-info-tag">
+                    <ShieldCheck size={16} className="text-teal" />
+                    <span>Dr. Aleena Usman (BDS)</span>
+                  </div>
+                </div>
                 
                 <div className="portrait-badge glass-card">
                   <Award className="text-gold" size={20} />

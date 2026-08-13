@@ -38,6 +38,46 @@
   display: block;
 }
 
+.doctor-placeholder-avatar {
+  width: 100%;
+  min-height: 380px;
+  background: linear-gradient(135deg, rgba(23, 42, 69, 0.9) 0%, rgba(10, 25, 47, 0.95) 100%);
+  border: 1px solid var(--glass-border-teal);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.avatar-graphic-box {
+  width: 170px;
+  height: 170px;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 8px 20px var(--accent-cyan-glow));
+}
+
+.doctor-avatar-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder-info-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(0, 168, 181, 0.12);
+  border: 1px solid rgba(0, 168, 181, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--accent-cyan);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
 .portrait-badge {
   position: absolute;
   bottom: 1.25rem;

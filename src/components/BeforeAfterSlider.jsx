@@ -138,10 +138,10 @@ export default function BeforeAfterSlider({ lang }) {
               className="comparison-img after-img"
             />
 
-            {/* BEFORE Image (Clipped overlay) */}
+            {/* BEFORE Image (Clipped dynamically with clipPath) */}
             <div 
               className="before-img-wrapper" 
-              style={{ width: `${sliderPos}%` }}
+              style={{ clipPath: `inset(0 ${100 - sliderPos}% 0 0)` }}
             >
               <img 
                 src={activeCase.beforeImage} 
